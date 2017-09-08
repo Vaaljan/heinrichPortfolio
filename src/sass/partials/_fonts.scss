@@ -1,0 +1,26 @@
+
+
+/*----------------fonts etc------------------
+----------------------------------------------------*/
+
+@font-face {
+  font-family: Muli-Regular;
+  src: url('Muli-Regular.ttf') format("truetype");
+
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('Ubuntu-Regular.ttf') format("truetype");
+
+}
+
+h1{
+	font-family: $ubuntuFont;
+}
+
+h3{
+	font-family: $muliFont;
+}
+.greenText{
+	color:$green;
+}

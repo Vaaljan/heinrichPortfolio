@@ -1,0 +1,49 @@
+.fullWidthNav{
+	background-color: $greyBlue;
+	height: $navHeight;
+}
+#mainNavigation{
+	background-color: transparent;
+	border: none;
+	height: $navHeight;
+	margin:0;
+}
+.logo{
+	padding-top: 6px;
+}
+.navbar-collapse{
+	height: $navHeight;
+	ul,li{
+		height: $navHeight;
+	}
+}
+.nav.navbar-nav{
+	li{
+		padding-left:20px;
+		padding-right:20px;
+			 background-color:transparent;
+		 	 -moz-transition: background-color .3s ease-in;
+		  	 -webkit-transition: background-color .3s ease-in;
+		  	 -o-transition: background-color .3s ease-in;
+		 	 transition: background-color .3s ease-in;
+		&:hover{
+			 background-color:$grey;
+			 -moz-transition: background-color 0.3s;
+			 -webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+			 transition: background-color 0.3s;
+		}
+		a{
+			&:hover{
+			color:$greyBlue;
+			};
+			color:#fff;
+			 -moz-transition: color .3s ease-in;
+		  	 -webkit-transition: color .3s ease-in;
+		  	 -o-transition: color .3s ease-in;
+		 	 transition: color .3s ease-in;
+		 	 padding-top:25px;
+		}
+	}
+
+}

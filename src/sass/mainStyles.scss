@@ -1,0 +1,18 @@
+
+
+$green:#00D657;
+$greyBlue:#323B4F;
+$grey:#BEC7D5;
+$navHeight:70px;
+
+$ubuntuFont: Ubuntu-Regular,Helvetica,Arial!important;
+$muliFont:Muli-Regular,Helvetica,Arial!important;
+
+//import customised bootstrap file 
+@import 'partials/_fonts';
+@import 'vendor/bootstrap-custom';
+@import 'partials/_nav';
+@import 'partials/_layout';
+@import 'partials/_mediaStyles';
+
+
