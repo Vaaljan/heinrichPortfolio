@@ -37,13 +37,11 @@ module.exports = function () {
 			appDir + 'js/directives/*.js'
 			],
 		resourcesJs: [
-			appDir + 'resources/jquery.min.js',
+			// appDir + 'resources/jquery.min.js',
 			appDir + 'resources/angular.min.js',
 			appDir + 'resources/angular-route.min.js',
-			appDir + 'resources/angular-cookies.min.js',
-			'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+			// 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 			appDir + 'resources/ui-bootstrap-tpls-1.1.2.min.js',
-			appDir + 'resources/moltin.min.js',
 			appDir + 'resources/underscore-min.js'
 
 			],
@@ -54,7 +52,7 @@ module.exports = function () {
 			],
 		injectSources: [
 			buildDev + '*.css',
-			buildDev + 'productData.js',
+			buildDev + 'portfolioData.js',
 			buildDev + 'resources.js',
 			buildDev + 'templates.js',
 			buildDev + 'main.js'

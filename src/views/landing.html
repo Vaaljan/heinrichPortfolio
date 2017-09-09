@@ -1,10 +1,72 @@
-hallo worlds
-
 <div class="first-section">
 	<div class="container">
-		<h1>I<span class="greenText largeText">'</span>m</h1>
-		<h1 class="greenText">Heinrich</h1>
-		<h1>Coetzee</h1>
+		<div class="mainTextHolder">
+			<h1>I<span class="greenText largeText">'</span>m</h1>
+			<h1 class="greenText">Heinrich</h1>
+			<h1>Coetzee</h1>
+			<h3>Front-end Engineer</h3>
+		</div>
+		<div class="resumeBlock">
+			<p>I am a front end developer currently using Angular.js as a framework with the addition of bootstrap UI for responsive design and underscore.js for data manipulation. </p>	
+			<p>I use Gulp to build my projects and I am comfortable using GIT or SVN. </p>
+			<p>My ideal work environment will be working on Mac OS running Sublime or visual studio code.</p>
+			<a href="https://www.dropbox.com/s/wzx0s3rxg29v7ae/Heinrich%20Coetzee%20CV.pdf?dl=0" target="_blank"><button class="btn btn-primary">Download Resume</button></a>
+		</div>
 	</div>
+</div>
 
+<div class="second-section">
+	<div class="container">
+		<div class="experiences row">
+			<div class="col-xs-1"><br/></div>
+			<div class="col-xs-10">
+			<div class="col-xs-12">
+				<h1>Experience</h1>
+				<h3>My Knowledge Level</h3>
+			</div>
+			<br/>
+			<div class="experienceBars" ng-repeat="item in landingCtrl.model.experiences">
+				<div class="col-xs-2">
+					<em>{{item.description}}</em>
+				</div>
+				<div class="col-xs-10">
+					<uib-progressbar animate="true" value="item.level"></uib-progressbar>
+				</div>
+			</div>
+			</div>
+			<div class="col-xs-1"><br/></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="third-section">
+	<div class="container">
+		<div class="workExperiences">
+				<h1>Work Experience</h1>
+				<h3>The Timeline</h3>
+			<div class="row">
+				<div class="col-xs-5">
+					<div class="timelineLeft">
+						<h5 class="greenText">2015-current</h5>
+						<h4>InfoSlips</h4>
+						<p>Front-end Developer</p>
+						<p class="greyText paragraph">My Responsibilities include building, designing data driven responsive web applications. These web applications contains charts and grids which are developed using either Kendo UI or chart.js. Other responsibilities includes managing Jira for one client and assigning tasks to developers.</p>
+					</div>
+				</div>
+				<div class="col-xs-2 timeline">
+					<center><img src="timeline.png" height="300px"></center>
+				</div>
+				<div class="col-xs-5">
+					<div class="timelineRight">
+						<h5 class="greenText">2009-2015</h5>
+						<h4>Judea Harvest</h4>
+						<p>Multi-media designer</p>
+						<p class="greyText paragraph">My Responsibilities included building, designing and maintaining the companies and sub divisions websites. Also included the making and production of multiple short-films for promotional purposes.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </div>

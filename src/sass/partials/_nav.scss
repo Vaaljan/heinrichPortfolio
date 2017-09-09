@@ -13,37 +13,58 @@
 }
 .navbar-collapse{
 	height: $navHeight;
-	ul,li{
+	ul,li,a{
 		height: $navHeight;
 	}
+}
+.viewOnGit{
+	padding-top: 25px;
+	a{
+		color:#fff;
+	}
+}
+.socialMedia{
+	padding-right: 10px;
+	padding-top: 10px;
 }
 .nav.navbar-nav{
 	li{
 		padding-left:20px;
 		padding-right:20px;
-			 background-color:transparent;
-		 	 -moz-transition: background-color .3s ease-in;
-		  	 -webkit-transition: background-color .3s ease-in;
-		  	 -o-transition: background-color .3s ease-in;
-		 	 transition: background-color .3s ease-in;
+			
 		&:hover{
+			
+		}
+		a{
+			height: $navHeight;
+			&.active{
+			color:$greyBlue;
 			 background-color:$grey;
 			 -moz-transition: background-color 0.3s;
 			 -webkit-transition: background-color 0.3s;
 			 -o-transition: background-color 0.3s;
 			 transition: background-color 0.3s;
-		}
-		a{
-			&:hover{
-			color:$greyBlue;
 			};
+			&:hover{
+	color:#fff;
+	text-decoration: underline;
+			}
 			color:#fff;
 			 -moz-transition: color .3s ease-in;
 		  	 -webkit-transition: color .3s ease-in;
 		  	 -o-transition: color .3s ease-in;
 		 	 transition: color .3s ease-in;
 		 	 padding-top:25px;
+		 	  background-color:transparent;
+		 	 -moz-transition: background-color .3s ease-in;
+		  	 -webkit-transition: background-color .3s ease-in;
+		  	 -o-transition: background-color .3s ease-in;
+		 	 transition: background-color .3s ease-in;
 		}
 	}
-
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	text-decoration: underline;
+	color: #fff!important;
 }
+}
+

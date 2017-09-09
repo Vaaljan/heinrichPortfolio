@@ -1,0 +1,12 @@
+<div class="portfolioPage">
+	<div class="container">
+		<div class="col-md-4" ng-repeat="work in portCtrl.model.portfolioLinks">
+			<div class="portfolioBlock">
+				<div class="previewThumb"><div ng-click="mainCtrl.showiframe(work.url,work.desc)" target="_blank">
+					<img ng-src="{{work.thumb}}">
+				</div></div>
+				<div class="description">{{work.desc}}</div>
+			</div>
+		</div>
+	</div>
+</div>

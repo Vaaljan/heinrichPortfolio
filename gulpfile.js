@@ -20,10 +20,6 @@ gulp.task('default', ['help'], function() {
 
 // Main dev task without actually hosting the site
 gulp.task('build', ['setBuildTarget','cleanAll','loadStyleConfig','inject'], function(doneCallBack) {
-	if (args.output === 'asis') {
-		addASISXslt(doneCallBack);
-		return;
-	}
 	doneCallBack();
 });
 
@@ -54,12 +50,12 @@ gulp.task('serve', ['build'], function() {
 
 	var sync =  browserSync({
 			server: config.dest,
-			index: 'index.htm'
+			index: 'index.html'
 		});
 	gulp.watch(config.sassToCompile, ['sass']);
 	gulp.watch([].concat(
 		config.jsToVet,config.views,
-		config.src + '*.htm',
+		config.src + '*.html',
 		config.styleConfigFile),
 		['reloadBrowser']);
 });
@@ -167,7 +163,7 @@ gulp.task('moveImages', function() {
 
 	return gulp
 		.src(config.images)
-		.pipe($.imagemin({optimizationLevel: 4}))
+		//.pipe($.imagemin({optimizationLevel: 4}))
 		.pipe(gulp.dest(config.dest));
 });
 
@@ -224,7 +220,7 @@ function injectProcessedSources() {
 	var sources = gulp.src(config.injectSources);
 
 	return gulp
-		.src(config.src + '*.htm')
+		.src(config.src + '*.html')
 		.pipe($.inject(sources, {ignorePath:'builds/develop/',addRootSlash: false}))
 		.pipe(gulp.dest(config.dest));
 }
@@ -237,21 +233,7 @@ function moveToDestination(sources, message) {
 		.pipe(gulp.dest(config.dest));
 }
 
-function addASISXslt(doneCallBack)
-{
-	var indexHtml = fs.readFileSync(config.dest + 'index.htm', 'utf8');
 
-	var xsltTop = '<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">' +
-	'\n<xsl:template match="recipients/recipient">' +
-	'\n<xsl:text disable-output-escaping="yes">' +
-	'\n<![CDATA[\n';
-
-	var xsltBottom = '\n]]></xsl:text></xsl:template></xsl:stylesheet>';
-
-	fs.writeFileSync(config.dest + 'index.xslt', xsltTop + indexHtml + xsltBottom);
-
-	doneCallBack();
-}
 
 function doMinify()
 {

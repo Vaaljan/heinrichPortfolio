@@ -16,11 +16,16 @@
 
 h1{
 	font-family: $ubuntuFont;
+
+
 }
 
 h3{
 	font-family: $muliFont;
 }
 .greenText{
-	color:$green;
+	color:$green!important;
+}
+.greyText{
+	color: $grey!important;
 }
