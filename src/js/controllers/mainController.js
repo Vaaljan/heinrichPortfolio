@@ -1,6 +1,6 @@
 ﻿angular.module('mainApp')
 
-  .controller('mainController', ['dataService','$location','$scope', '$sce', function (dataService, $location,$scope, $sce) {
+  .controller('mainController', ['dataService','$location','$scope', '$sce','$window','$route', function (dataService, $location,$scope, $sce,$window,$route) {
     
     var controller = this;
     
@@ -21,6 +21,13 @@
       controller.dataService.iframeView = true;
     }
 
-    
+    controller.isCollapsed = true;
+
+
+    // var appWindow = angular.element($window);
+
+    //   appWindow.bind('resize', function () {
+    //    location.reload();
+    //   });
 
   }]);

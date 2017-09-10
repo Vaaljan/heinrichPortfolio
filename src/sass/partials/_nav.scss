@@ -7,9 +7,12 @@
 	border: none;
 	height: $navHeight;
 	margin:0;
+	z-index: 100;
 }
-.logo{
-	padding-top: 6px;
+img.logo{	
+		padding-top: 10px;
+		height: 60px;
+	
 }
 .navbar-collapse{
 	height: $navHeight;
@@ -67,4 +70,23 @@
 	color: #fff!important;
 }
 }
+
+.navbar-default .navbar-toggle{
+	height: 100%;
+	margin-top: 0;
+	border:none;
+	padding:0;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: $grey;
+}
+.navbar-toggle .icon-bar{
+	height: 3px;
+	width: 30px;
+	margin-top: 5px!important;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color:transparent; 
+}
+
 

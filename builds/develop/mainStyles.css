@@ -3717,10 +3717,12 @@ button.close {
   background-color: transparent;
   border: none;
   height: 70px;
-  margin: 0; }
+  margin: 0;
+  z-index: 100; }
 
-.logo {
-  padding-top: 6px; }
+img.logo {
+  padding-top: 10px;
+  height: 60px; }
 
 .navbar-collapse {
   height: 70px; }
@@ -3767,6 +3769,23 @@ button.close {
   text-decoration: underline;
   color: #fff !important; }
 
+.navbar-default .navbar-toggle {
+  height: 100%;
+  margin-top: 0;
+  border: none;
+  padding: 0; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #BEC7D5; }
+
+.navbar-toggle .icon-bar {
+  height: 3px;
+  width: 30px;
+  margin-top: 5px !important; }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent; }
+
 .first-section {
   background-image: url("bg.png");
   background-position: center;
@@ -3778,22 +3797,24 @@ button.close {
   text-align: center; }
   .first-section .mainTextHolder h1 {
     color: #fff;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    font-size: 70px !important; }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 70px; }
   .first-section .mainTextHolder h3 {
     color: #BEC7D5; }
   .first-section .resumeBlock {
     background-color: #323B4F;
     width: 70%;
     padding: 20px;
-    margin: 100px auto 0 auto;
+    margin: 40px auto 0 auto;
     color: #fff; }
 
 .second-section {
-  height: calc(100vh);
+  min-height: calc(100vh);
   padding-bottom: 100px;
   background-color: #323B4F; }
+  .second-section .showOnMobile {
+    display: none; }
   .second-section .experiences {
     margin-top: 50px; }
     .second-section .experiences em, .second-section .experiences h3 {
@@ -3809,7 +3830,7 @@ button.close {
       font-size: 70px; }
 
 .third-section {
-  height: calc(100vh);
+  min-height: calc(100vh);
   background-color: #323B4F;
   border-top: 2px solid #BEC7D5; }
   .third-section .workExperiences em, .third-section .workExperiences h3 {
@@ -3871,7 +3892,7 @@ button.btn-primary {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   background-position: top; }
   .portfolioPage .col-md-4 {
     margin-top: 50px; }
@@ -3901,3 +3922,53 @@ button.btn-primary {
 .socialMedia a {
   float: right;
   margin-right: 10px; }
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    text-decoration: underline;
+    background-color: transparent;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .nav.navbar-nav li a {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .navbar-collapse ul, .navbar-collapse li, .navbar-collapse a {
+    height: 40px !important; }
+  .socialMedia {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 10px; }
+    .socialMedia a {
+      float: left;
+      height: 40px !important; }
+  #mainNavigation {
+    width: 100% !important; }
+  .navbar-collapse {
+    border-color: #BEC7D5;
+    background-color: #323B4F !important;
+    position: absolute;
+    width: 130%;
+    top: 70px;
+    padding: 0;
+    margin-left: -60px !important; }
+  .resumeBlock {
+    width: 100% !important;
+    margin-top: 20px !important; }
+  .hideMobile {
+    display: none; }
+  .mainTextHolder {
+    padding: 5px !important; }
+    .mainTextHolder h1 {
+      color: #fff;
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+      font-size: 40px !important; }
+    .mainTextHolder h3 {
+      font-size: 20px !important;
+      margin-top: 10px !important;
+      margin-bottom: 0 !important; }
+  .timelineLeft, .timelineRight {
+    text-align: center !important;
+    margin: 0 !important; } }

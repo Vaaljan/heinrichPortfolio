@@ -18,23 +18,23 @@
 <div class="second-section">
 	<div class="container">
 		<div class="experiences row">
-			<div class="col-xs-1"><br/></div>
-			<div class="col-xs-10">
-			<div class="col-xs-12">
-				<h1>Experience</h1>
-				<h3>My Knowledge Level</h3>
-			</div>
+			<div class="col-xs-1 hideMobile"><br/></div>
+			<div class="col-sm-10 col-xs-12">
+				<div class="col-xs-12">
+					<h1>Experience</h1>
+					<h3>My Knowledge Level</h3>
+				</div>
 			<br/>
-			<div class="experienceBars" ng-repeat="item in landingCtrl.model.experiences">
-				<div class="col-xs-2">
-					<em>{{item.description}}</em>
+				<div class="experienceBars col-xs-12" ng-repeat="item in landingCtrl.model.experiences">
+					<div class="col-sm-2 col-xs-12">
+						<em>{{item.description}}</em>
+					</div>
+					<div class="col-sm-10 col-xs-12">
+						<uib-progressbar animate="true" value="item.level"></uib-progressbar>
+					</div>
 				</div>
-				<div class="col-xs-10">
-					<uib-progressbar animate="true" value="item.level"></uib-progressbar>
 				</div>
-			</div>
-			</div>
-			<div class="col-xs-1"><br/></div>
+			<div class="col-xs-1 hideMobile"><br/></div>
 		</div>
 	</div>
 </div>
@@ -46,7 +46,7 @@
 				<h1>Work Experience</h1>
 				<h3>The Timeline</h3>
 			<div class="row">
-				<div class="col-xs-5">
+				<div class="col-sm-5 col-xs-12">
 					<div class="timelineLeft">
 						<h5 class="greenText">2015-current</h5>
 						<h4>InfoSlips</h4>
@@ -54,10 +54,10 @@
 						<p class="greyText paragraph">My Responsibilities include building, designing data driven responsive web applications. These web applications contains charts and grids which are developed using either Kendo UI or chart.js. Other responsibilities includes managing Jira for one client and assigning tasks to developers.</p>
 					</div>
 				</div>
-				<div class="col-xs-2 timeline">
+				<div class="col-sm-2 col-xs-12 timeline">
 					<center><img src="timeline.png" height="300px"></center>
 				</div>
-				<div class="col-xs-5">
+				<div class="col-sm-5 col-xs-12">
 					<div class="timelineRight">
 						<h5 class="greenText">2009-2015</h5>
 						<h4>Judea Harvest</h4>
