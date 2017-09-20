@@ -3772,6 +3772,7 @@ img.logo {
 .navbar-default .navbar-toggle {
   height: 100%;
   margin-top: 0;
+  margin-right: -20px;
   border: none;
   padding: 0; }
 
@@ -3781,7 +3782,8 @@ img.logo {
 .navbar-toggle .icon-bar {
   height: 3px;
   width: 30px;
-  margin-top: 5px !important; }
+  margin-top: 5px !important;
+  margin-right: 0; }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: transparent; }
@@ -3923,6 +3925,11 @@ button.btn-primary {
   float: right;
   margin-right: 10px; }
 
+.disclaimer {
+  background-color: #BEC7D5;
+  padding: 5px;
+  color: #323B4F; }
+
 @media (max-width: 768px) {
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     text-decoration: underline;
@@ -3930,11 +3937,18 @@ button.btn-primary {
     color: #fff;
     padding-top: 5px;
     padding-bottom: 5px; }
+  .portfolioPage {
+    padding-top: 30px; }
   .nav.navbar-nav li a {
     padding-top: 5px;
     padding-bottom: 5px; }
   .navbar-collapse ul, .navbar-collapse li, .navbar-collapse a {
     height: 40px !important; }
+  .navbar-toggle.collapsed {
+    top: 0;
+    margin-top: 0; }
+  .fullWidthNav {
+    height: 0; }
   .socialMedia {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -3946,13 +3960,13 @@ button.btn-primary {
   #mainNavigation {
     width: 100% !important; }
   .navbar-collapse {
-    border-color: #BEC7D5;
+    border: none;
     background-color: #323B4F !important;
     position: absolute;
-    width: 130%;
-    top: 70px;
+    width: 100%;
+    top: 0px;
     padding: 0;
-    margin-left: -60px !important; }
+    margin-left: -30px !important; }
   .resumeBlock {
     width: 100% !important;
     margin-top: 20px !important; }

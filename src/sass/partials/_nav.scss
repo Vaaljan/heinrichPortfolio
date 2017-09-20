@@ -74,6 +74,7 @@ img.logo{
 .navbar-default .navbar-toggle{
 	height: 100%;
 	margin-top: 0;
+	margin-right: -20px;
 	border:none;
 	padding:0;
 }
@@ -84,6 +85,7 @@ img.logo{
 	height: 3px;
 	width: 30px;
 	margin-top: 5px!important;
+	margin-right: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
 	background-color:transparent; 
